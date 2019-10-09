@@ -16,4 +16,7 @@ func main() {
 
 	list.PrintLinkedList()
 
+	node := *list.LastNode()
+	fmt.Println()
+
 }
