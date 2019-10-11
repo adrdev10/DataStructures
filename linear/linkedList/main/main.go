@@ -7,7 +7,6 @@ import (
 )
 
 func main() {
-	fmt.Println("Hello World")
 	list := &linkedList.LinkedList{}
 
 	list.Add(100)
@@ -16,7 +15,9 @@ func main() {
 
 	list.PrintLinkedList()
 
-	node := *list.LastNode()
-	fmt.Println()
+	fmt.Println(*list.LastNode())
+
+	list.AddToTheEnd(1000000)
+	list.PrintLinkedList()
 
 }

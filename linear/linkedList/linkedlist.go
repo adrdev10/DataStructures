@@ -17,18 +17,12 @@ type LinkedList struct {
 func (listNode *LinkedList) Add(property int) {
 	var node = &Node{}
 	node.property = property
-	if listNode.headNode == nil {
-		listNode.headNode = node
-	} else if listNode.headNode != nil {
+	if listNode.headNode != nil {
 		node.nextNode = listNode.headNode
 		listNode.headNode = node
 	}
+	listNode.headNode = node
 }
-
-// //Remove removes a node from a linkedlist
-// func (listNode *LinkedList) Remove(property int) {
-
-// }
 
 //LastNode returns the last node of the linkedlist. Deletion and insertion takes 0(1) constant time
 func (listNode *LinkedList) LastNode() *Node {
@@ -36,10 +30,19 @@ func (listNode *LinkedList) LastNode() *Node {
 	outNode := &Node{}
 	for node = listNode.headNode; node != nil; node = node.nextNode {
 		if node.nextNode == nil {
-			outNode = node.nextNode
+			outNode = node
+			return outNode
 		}
 	}
-	return outNode
+	return nil
+}
+
+//AddToTheEnd
+func (listNode *LinkedList) AddToTheEnd(property int) {
+	node := &Node{property: property}
+	if n := listNode.LastNode(); n != nil {
+		n.nextNode = node
+	}
 }
 
 //PrintLinkedList prints the content of the linkedList
