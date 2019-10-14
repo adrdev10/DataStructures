@@ -3,11 +3,11 @@ package main
 import (
 	"fmt"
 
-	"github.com/xdragon1015/DataStructures/linear/linkedList"
+	linkedlist "github.com/xdragon1015/DataStructures/linear/linkedList"
 )
 
 func main() {
-	list := &linkedList.LinkedList{}
+	list := &linkedlist.LinkedList{}
 
 	list.Add(100)
 	list.Add(1000)
@@ -19,5 +19,7 @@ func main() {
 
 	list.AddToTheEnd(1000000)
 	list.PrintLinkedList()
+
+	fmt.Println(list.NodeWithValue(1000000))
 
 }
