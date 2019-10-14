@@ -48,6 +48,11 @@ func (listNode *LinkedList) AddToTheEnd(property int) {
 	}
 }
 
+//NodeWithValue returns the node with property value
+func (listNode LinkedList) NodeWithValue(property int) {
+
+}
+
 //PrintLinkedList prints the content of the linkedList
 func (listNode *LinkedList) PrintLinkedList() {
 	node := &Node{}
@@ -59,9 +64,3 @@ func (listNode *LinkedList) PrintLinkedList() {
 		fmt.Println("Node with value", node.property)
 	}
 }
-	for node = listNode.headNode; node != nil; node = node.nextNode {
-		fmt.Println("Node with value", node.property)
-	}
-}
-
-
