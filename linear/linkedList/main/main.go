@@ -20,6 +20,6 @@ func main() {
 	list.AddToTheEnd(1000000)
 	list.PrintLinkedList()
 
-	fmt.Println(list.NodeWithValue(1000000))
+	// fmt.Println(list.Nod(1000000))
 
 }
