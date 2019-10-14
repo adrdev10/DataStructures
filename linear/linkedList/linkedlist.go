@@ -1,3 +1,4 @@
+//Package linkedList represents the linkedlist data structures
 package linkedList
 
 import "fmt"
@@ -20,8 +21,10 @@ func (listNode *LinkedList) Add(property int) {
 	if listNode.headNode != nil {
 		node.nextNode = listNode.headNode
 		listNode.headNode = node
+	} else {
+		listNode.headNode = node
+
 	}
-	listNode.headNode = node
 }
 
 //LastNode returns the last node of the linkedlist. Deletion and insertion takes 0(1) constant time
@@ -37,7 +40,7 @@ func (listNode *LinkedList) LastNode() *Node {
 	return nil
 }
 
-//AddToTheEnd
+//AddToTheEnd adds a new node to the end of the list
 func (listNode *LinkedList) AddToTheEnd(property int) {
 	node := &Node{property: property}
 	if n := listNode.LastNode(); n != nil {
