@@ -43,26 +43,3 @@ func (stack *Stack) Pop() *Element {
 	return element
 
 }
-
-func (stack *Stack) Push(element *Element) {
-	stack.elements = append(stack.elements[:stack.elementCount], element)
-	stack.elementCount++
-}
-
-func (stack *Stack) Pop() *Element {
-	if stack.elementCount == 0 {
-		return nil
-	}
-
-	var length = len(stack.elements)
-	var element = stack.elements[length-1]
-
-	if length > 1 {
-		stack.elements = stack.elements[:length-1]
-	} else {
-		stack.elements = stack.elements[0:]
-	}
-	stack.elementCount = len(stack.elements)
-	return element
-
-}
