@@ -88,9 +88,9 @@ func insertRNode(rootNode *TreeNode, key KeyValue) (*TreeNode, bool) {
 	}
 	rootNode.BalanceValue = rootNode.BalanceValue + (dir - 1)
 	switch rootNode.BalanceValue {
-	case 0, 1, -1:
+	case 0:
 		return rootNode, true
-	case -2, 2:
+	case 1, -1:
 		return rootNode, false
 	}
 	fmt.Println(dir)

@@ -55,7 +55,7 @@ func main() {
 	avstree.InsertNode(&avst, integerKey(8))
 	avstree.InsertNode(&avst, integerKey(10))
 	avstree.InsertNode(&avst, integerKey(20))
-	fmt.Println(avst)
+	fmt.Println(avst.LinkedNodes[1])
 }
 
 func print(val int) {
